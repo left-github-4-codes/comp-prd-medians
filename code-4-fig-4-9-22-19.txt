@@ -1,0 +1,39 @@
+
+Matlab-codes-4-figure 4
+>> H=[-4.0000    2.4800
+-3.0000    0.7300
+-2.0000   -0.0400
+-1.0000   -1.4400
+ 0.0000   -1.3200
+10.0000    0.0000]'
+>> x=H(1,:);
+y=-1.7317456-0.8184845.*x;
+>> plot(x,y, '-r', 'LineWidth', 1,'DisplayName', '$T^*_{PRD}$', 'Interpreter', 'latex');
+Error using plot
+There is no Interpreter property on the Line class.
+ 
+>> plot(x,y, '-r', 'LineWidth', 1,'DisplayName', '$T^*_{PRD}$');
+>> hold on;
+>> y=-1.87-0.977.*x;
+plot(x,y, '--b', 'LineWidth', 1, 'DisplayName', 'LS no outlier');
+>> y=0.07-0.08*x;
+>> plot(x,y, ':g','LineWidth', 1,'DisplayName', 'LS');
+>> scatter(H(1,:),H(2,:),'filled');
+
+>> lgd=legend({'$T^*_{PRD}$', 'LS without outlier', 'LS'},'Location','southwest','Interpreter', 'latex');
+>> title(lgd, 'Regression lines by different methods')
+>> hold off;
+
+x=H(1,1:5);
+%y=-1.7317456-0.8184845.*x; %six points deepest line
+y=-2.087114-1.009444.*x; %five points deepest line
+plot(x,y, '-r', 'LineWidth', 1,'DisplayName', '$T^*_{PRD}$')
+ hold on;
+ y=-1.87-0.977.*x;
+plot(x,y,'--b', 'LineWidth', 1, 'DisplayName', 'LS');
+ y=-1.58-0.77.*x; %deepest RD line 3/5
+%disp([x,y]);
+plot(x,y,':g', 'LineWidth', 1,'DisplayName', '$T^*_{RD}$');
+scatter(H(1,1:5),H(2,1:5),'filled');
+lgd=legend({'$T^*_{PRD}$','LS', '$T^*_{RD}$'},'Location','southwest','Interpreter', 'latex');
+>> title(lgd, 'Regression lines by different methods')
