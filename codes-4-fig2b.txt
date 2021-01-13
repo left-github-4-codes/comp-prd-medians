@@ -1,0 +1,39 @@
+> install.packages("plotrix")
+> require(plotrix)
+
+> plot (c(-1, 5), c(-1,5),xlab="", ylab="")
+> arrows(0,0, 2,5, lwd=2)
+> arrows(0,0, 4,1, lwd=2)
+> arrows(0,0, 4,4, lwd=2)
+> points(c(0,1), c(5,4), pch=16)
+> text(4.2,1.1,"u1")
+> text(2.2,5.1,"u2") 
+>  text(4.2,4.1,"u")
+> text(0,4.8,"Xi")
+> text(1,3.8,"Xj")
+> title(main="projected values change their orders")
+
+
+
+
+
+> plot (c(-2, 2), c(-2,2),xlab="", ylab="")
+> draw.circle(0,0, 1, border="blue",lty=1,lwd=2)
+> polygon(c(0,1/2+0.05, sqrt(3)/2), c(0,sqrt(3)/2+0.05, 1/2), border="red")
+> polygon(c(0,1/2+0.05, sqrt(3)/2), c(0,sqrt(3)/2+0.05, 1/2),col="green", border="red")
+> title(main="an angular region within unit circle")
+
+
+> points(c(1,4,6,5,2), c(4,1,3.8,6,6.2), pch=19, col="green")
+> text(c(1,4,6,5,2), c(4,1,3.8,6,6.2), labels=c("1","2","3","4","5"), pos=4, col="blue", cex=1)
+> abline(0,-2,lty=1)
+> text(0,-1, "14", col="blue", cex=1)
+> text(1/6,23/5, "13", col="blue", cex=1)
+> arrows(0,0,6, -6/5, lwd=1)
+> text(4,-.7,"24",col="blue",cex=1)
+> arrows(0,0,8, 8/2.6, lwd=1)
+> text(6,5/2.6,"25",col="blue",cex=1)
+> arrows(0,0,5,5/(0.6), lwd=1)
+> text(3,2.7/0.6, "35",col="blue",cex=1)
+> text(-0.1,-.1,"O", col="red", cex=1)
+> 
